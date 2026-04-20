@@ -1,0 +1,1 @@
+﻿// o problema é o seguinte, tenho N provas para serem avaliadas e dentro dessas N notas preciso saber qual a maior nota e quantos alunos ficaram com a nota acima da media 
