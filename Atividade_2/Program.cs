@@ -11,7 +11,7 @@
 
 int ContadorAcimaMedia = 0;
 int Soma = 0;
-double Media=0;
+double Media = 0;
 System.Console.WriteLine("Informe a quantidade de alunos na turma");
 int QuantidadeAlunos = int.Parse(Console.ReadLine());
 
@@ -22,13 +22,17 @@ for (int i = 0; i < Alunos.Length; i++)
     System.Console.WriteLine($"Informe a nota do {i + 1}° aluno");
     Alunos[i] = int.Parse(Console.ReadLine());
     Soma = Soma + Alunos[i];
-    Media = (double) Soma / QuantidadeAlunos;
-    if (Alunos[i]>Media)
+}
+Media = (double)Soma / QuantidadeAlunos;
+
+for (int i = 0; i < Alunos.Length; i++)
+{
+    if (Alunos[i]>=Media)
     {
         ContadorAcimaMedia++;
     }
 }
-System.Console.WriteLine($"{Soma}");
-System.Console.WriteLine($"{Media.ToString("F2")}");
+
+//problema estava sendo que eu estava tentando comparar a medias antes de ter todas as notas a dispocição, e não estava percorrendo o vetor de novo para fazer a verificação após ter todas as notas. 
 
 System.Console.WriteLine($"O resultado final é o seguinte:\nA media da turma é de {Media}\nQuantidade de alunos que ficaram acima da media foram {ContadorAcimaMedia}");
