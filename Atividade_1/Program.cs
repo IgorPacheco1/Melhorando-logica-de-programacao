@@ -8,17 +8,22 @@
 //No final, mostrar a maior nota e quantos alunos tiraram nota acima de 60.
 
 int MaiorNota = 0;
-
+int ContadorNotas = 0;
 System.Console.WriteLine("informe a quantidade de alunos que realizaram a prova");
 int n = int.Parse(Console.ReadLine());
 
 for (int i = 0; i < n; i++)
 {
-    System.Console.WriteLine($"informe qual a nota está na {i+1}° prova");
+    System.Console.WriteLine($"informe qual a nota está na {i + 1}° prova");
     int nota = int.Parse(Console.ReadLine());
-    if (nota>MaiorNota)
+    if (nota > MaiorNota)
     {
         MaiorNota = nota;
     }
+    if (nota > 60)
+    {
+        ContadorNotas++;
+    }
 }
 System.Console.WriteLine($"A maior nota entre os {n} alunos foi a de {MaiorNota}");
+System.Console.WriteLine($"E o número de alunos que ficaram com a pontuação acima de 60 foram de {ContadorNotas}");
