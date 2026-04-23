@@ -15,21 +15,38 @@
 // Saída: Exibir o valor da média da turma e a quantidade total de alunos que ficaram "acima ou na média".
 class program
 {
+    static int CalcularMedia(double[] vetor)
+    {
+        //o que é preciso para calcular a media?
+        // fazer ele percorrer todo o vetor e ir somando, após isso dividir pela a quantidade que tem no vetor
+
+        int SomaMedia = 0;
+        double Media = 0;
+
+        for (int i = 0; i < vetor.Length; i++)
+        {
+            SomaMedia += vetor[i];
+        }
+        Media = (double) SomaMedia / vetor.Length;
+
+        return(Media);
+
+    }
+
     static void Main(string[] args)
     {
-        int [] Alunos = new int [QuantidadeAlunos];
-
         System.Console.WriteLine("Insira a quantidade de alunos possui na turma");
         int QuantidadeAlunos = int.Parse(Console.ReadLine());
+        int[] Alunos = new int[QuantidadeAlunos];
 
         for (int i = 0; i < Alunos.Length; i++)
         {
-            System.Console.WriteLine($"Informe a nota do {i+1}° aluno");
-            Alunos [i] = int.Parse(Console.ReadLine());
+            System.Console.WriteLine($"Informe a nota do {i + 1}° aluno");
+            Alunos[i] = int.Parse(Console.ReadLine());
         }
 
-
-
+        double teste = CalcularMedia(QuantidadeAlunos);
+        System.Console.WriteLine(teste);
     }
 
 }
