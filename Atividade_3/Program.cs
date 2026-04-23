@@ -37,16 +37,17 @@ class program
         int ContAcimaMedia = 0;
         for (int i = 0; i < vetor.Length; i++)
         {
-            if(vetor[i] > Media)
+            if (vetor[i] > Media)
             {
                 ContAcimaMedia++;
             }
-        };
+        }
+        ;
 
-        return(ContAcimaMedia);
+        return (ContAcimaMedia);
     }
 
-    static void ExibirTudo(double media,int AcimaMedia)
+    static void ExibirTudo(double media, int AcimaMedia)
     {
         System.Console.WriteLine($"--Relatório final--\nA média total da turma foi de {media} pontos\nO total de alunos que ficaram acima da média foram de {AcimaMedia} alunos");
     }
@@ -62,6 +63,7 @@ class program
             Alunos[i] = int.Parse(Console.ReadLine());
         }
 
+        ExibirTudo(CalcularMedia(Alunos), AcimaMedia(Alunos, CalcularMedia(Alunos)));
 
     }
 
