@@ -42,6 +42,8 @@ class program
                 ContAcimaMedia++;
             }
         };
+
+        return(ContAcimaMedia);
     }
     static void Main(string[] args)
     {
@@ -55,7 +57,7 @@ class program
             Alunos[i] = int.Parse(Console.ReadLine());
         }
 
-        double teste = CalcularMedia(Alunos);
+        double teste = AcimaMedia(Alunos,CalcularMedia(Alunos));
         System.Console.WriteLine(teste);
     }
 
