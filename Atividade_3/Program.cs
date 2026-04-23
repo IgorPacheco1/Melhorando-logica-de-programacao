@@ -45,6 +45,11 @@ class program
 
         return(ContAcimaMedia);
     }
+
+    static void ExibirTudo(double media,int AcimaMedia)
+    {
+        System.Console.WriteLine($"--Relatório final--\nA média total da turma foi de {media} pontos\nO total de alunos que ficaram acima da média foram de {AcimaMedia} alunos");
+    }
     static void Main(string[] args)
     {
         System.Console.WriteLine("Insira a quantidade de alunos possui na turma");
@@ -57,8 +62,7 @@ class program
             Alunos[i] = int.Parse(Console.ReadLine());
         }
 
-        double teste = AcimaMedia(Alunos,CalcularMedia(Alunos));
-        System.Console.WriteLine(teste);
+
     }
 
 }
