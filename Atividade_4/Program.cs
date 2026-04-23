@@ -33,10 +33,12 @@ class program
 
         for (int i = 0; i < ListaEstudantes.Length; i++)
         {
-            SomaMedia += EstudanteId.Nota;
-        };
-        double Media     = SomaMedia / ListaEstudantes;
-        return(Media);
+            SomaMedia += EstudanteId.Nota; 
+            //estou com dificuldade de entender como eu vou conseguir pegar o "ID" do estutante pra ter acesso a nota dele
+        }   //talvez eu esteja complicando o simples com esse ID que eu criei.
+        ;
+        double Media = SomaMedia / ListaEstudantes;
+        return (Media);
     }
 
     static void Main(string[] args)
@@ -59,6 +61,6 @@ class program
             EstudanteID.Nota = double.Parse(Console.ReadLine());
         }
 
-
+        System.Console.WriteLine(CalcularMedia(ListaEstudantes));
     }
 }
