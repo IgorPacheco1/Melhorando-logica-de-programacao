@@ -29,10 +29,20 @@ class program
         }
         Media = (double)SomaMedia / vetor.Length;
 
-        return(Media);
+        return (Media);
 
     }
-
+    static int AcimaMedia(int[] vetor, double Media)
+    {
+        int ContAcimaMedia = 0;
+        for (int i = 0; i < vetor.Length; i++)
+        {
+            if(vetor[i] > Media)
+            {
+                ContAcimaMedia++;
+            }
+        };
+    }
     static void Main(string[] args)
     {
         System.Console.WriteLine("Insira a quantidade de alunos possui na turma");
