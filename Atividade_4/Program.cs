@@ -23,26 +23,39 @@ class Estudante
     public double Nota;
 
 }
-
 class program
 {
+
+
+    static double CalcularMedia(Estudante[] ListaEstudantes)
+    {
+        int SomaMedia = 0;
+
+        for (int i = 0; i < ListaEstudantes.Length; i++)
+        {
+            SomaMedia += EstudanteId.Nota;
+        };
+        double Media     = SomaMedia / ListaEstudantes;
+        return(Media);
+    }
+
     static void Main(string[] args)
     {
 
         System.Console.WriteLine("---Olá vc está iniciando o nosso sistema de cadastro de alunos---\nInsira a quantidade de alunos"); //voltar aqui dps para fazer um menu com switch para ser um sistema completo de cadastro
         int QuantidadeEstudantes = int.Parse(Console.ReadLine());
 
-        Estudante [] ListaEstudantes = new Estudante[QuantidadeEstudantes];
+        Estudante[] ListaEstudantes = new Estudante[QuantidadeEstudantes];
 
         //agora q eu tenho o vetor vou começar a povoar ele
-
-        for (int i = 0; i < QuantidadeEstudantes; i++)
+        int i = 0;
+        string EstudanteID = "estudante" + $"{i}"; //sei que isso é meio inutil(ou talvez não), mas quero deixar formatado e descobrir os limites do que eu posso fazer
+        for (i < QuantidadeEstudantes; i++;)
         {
-            System.Console.WriteLine($"Informe o nome do {i+1}° estudante");
-            string EstudanteID = "estudante" + $"{i}"; //sei que isso é meio inutil(ou talvez não), mas quero deixar formatado e descobrir os limites do que eu posso fazer
-            Estudante EstudanteID  = new Estudante();
+            System.Console.WriteLine($"Informe o nome do {i + 1}° estudante");
+            Estudante EstudanteID = new Estudante();
             EstudanteID.Nome = Console.ReadLine();
-            System.Console.WriteLine($"Informe a nota do {i+1}° estudante");
+            System.Console.WriteLine($"Informe a nota do {i + 1}° estudante");
             EstudanteID.Nota = double.Parse(Console.ReadLine());
         }
 
