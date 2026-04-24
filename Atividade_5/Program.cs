@@ -1,59 +1,82 @@
-﻿// 📋 Novo Cenário: Sistema de Controle de Estoque (Versão POO)
-// Contexto:
-// Você foi contratado por uma loja de tecnologia para gerenciar o estoque de produtos. Cada produto tem um nome e um preço unitário.
+﻿// 🏛️ Desafio: O Gestor de Estoque ProfissionalContexto:
+// A loja de tecnologia percebeu que o sistema antigo permitia erros graves, como cadastrar preços negativos ou exibir informações bagunçadas.
+//  Eles precisam de uma versão "blindada" e mais inteligente do software.
 
-// O Desafio:
+//  Sua Missão:
+//  A Entidade Produto:Crie uma estrutura para o Produto que impeça que o preço seja alterado para um valor negativo. Se alguém tentar inserir um valor abaixo de zero, o sistema deve automaticamente ajustar para zero (ou impedir a alteração).
 
-// A Classe: Crie uma classe chamada Produto com os atributos: Nome e Preco.
+//  O nome do produto deve ser acessível para leitura e escrita, mas protegido por uma lógica de acesso controlada.
+//  A Inteligência do Objeto:O Produto não deve ser apenas um depósito de dados. Ele deve ser capaz de fornecer, por conta própria, uma linha de texto formatada com seus dados (Nome e Preço) pronta para ser exibida em um relatório, sem que o programador do Main precise montar a frase manualmente.
 
-// O Inventário: No Main, pergunte quantos produtos diferentes o usuário deseja cadastrar.
+//  O Fluxo do Sistema:Solicite a entrada de $N$ produtos.
 
-// O Cadastro: Crie um vetor de objetos para armazenar esses produtos e preencha-os via teclado.
+//  Após o cadastro, o sistema deve processar o inventário e exibir:A lista formatada gerada pelos próprios produtos.O valor total acumulado de todos os itens.
 
-// Relatório Final: Após cadastrar tudo, o programa deve exibir:
+//  O nome do item que representa o maior investimento (maior preço) da loja.Regra de Ouro do Mentor:Tente fazer com que o seu Main seja o mais "limpo" possível.
 
-// A lista de todos os produtos com seus preços.
+//   O Main deve apenas coordenar, enquanto a classe Produto deve cuidar da integridade dos seus próprios dados.Dica para começar:
 
-// O valor total do inventário (a soma de todos os preços).
-
-// O nome do produto mais caro da loja.
+//   Pense no "porteiro" (get/set) que discutimos. Como você impediria que o preço fosse negativo ali dentro?Estou ansioso para ver como você vai estruturar essa "blindagem"! 
 
 
 
 class Produto
 {
-    public string Nome;
-    public double Preco;
+    private string _Nome;
+    private double _Preco;
+
+    public string Nome
+    {
+        get { return _Nome; } //pelo que eu entendi dessa parte de encapsulamento, o get serve para permitir ler o valor, tanto que o return vai ser o private. 
+        set { _Nome = value; }
+    }
+
+    public double Preco
+    {
+        get { return _Preco; }
+        set
+        {
+            if (value >= 0)
+            {
+                _Preco = value;
+            }
+            else
+            {
+                _Preco = 0;
+            }
+        }
+    }
 }
 
 class program
 {
 
     static string CalcularMaiorPreco(Produto[] lista)
-    {   double Maior=0;
-        string Nome="";
+    {
+        double Maior = 0;
+        string Nome = "";
         for (int i = 0; i < lista.Length; i++)
         {
-            if (lista[i].Preco>Maior)
+            if (lista[i].Preco > Maior)
             {
                 Maior = lista[i].Preco;
-                Nome  = lista[i].Nome;
+                Nome = lista[i].Nome;
             }
         }
-        return(Nome);
+        return (Nome);
     }
 
     static void ExibirDados(Produto[] lista)
-    {   
+    {
         double SomaPreco = 0;
         for (int i = 0; i < lista.Length; i++)
         {
-            
+
             SomaPreco += lista[i].Preco;
             System.Console.WriteLine($"\nNome: {lista[i].Nome}\nPreço: {lista[i].Preco}\n");
         }
         System.Console.WriteLine($"---O Valor total do estoque---\n{SomaPreco}\n---O Produto de maior valor no estoque---\n{CalcularMaiorPreco(lista)}");
-        
+
     }
 
     static void Main(string[] args)
@@ -72,7 +95,7 @@ class program
             ListaProdutos[i].Preco = double.Parse(Console.ReadLine());
 
         }
-            
+
         ExibirDados(ListaProdutos);
     }
 }
