@@ -44,7 +44,7 @@ class program
 
         }
         ;
-        double Media = SomaMedia / ListaEstudantes;
+        double Media = SomaMedia / ListaEstudantes.Length;
         return (Media);
     }
 
@@ -63,8 +63,8 @@ class program
             ListaEstudantes[i] = new Estudante();
             System.Console.WriteLine($"Informe o nome do {i + 1}° estudante:");
             ListaEstudantes[i].Nome = Console.ReadLine();
-            System.Console.WriteLine($"Informe anota do {i + 1}° estudante:");
-            ListaEstudantes[i].Nota = Console.ReadLine();
+            System.Console.WriteLine($"Informe a nota do {i + 1}° estudante:");
+            ListaEstudantes[i].Nota = double.Parse(Console.ReadLine());
         }
 
         ExibirDadosAlunos(ListaEstudantes);
