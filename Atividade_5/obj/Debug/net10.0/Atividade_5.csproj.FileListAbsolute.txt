@@ -3,3 +3,13 @@ C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\
 C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_5\obj\Debug\net10.0\Atividade_5.AssemblyInfo.cs
 C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_5\obj\Debug\net10.0\Atividade_5.csproj.CoreCompileInputs.cache
 C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_5\obj\Debug\net10.0\Atividade_5.sourcelink.json
+C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_5\bin\Debug\net10.0\Atividade_5.exe
+C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_5\bin\Debug\net10.0\Atividade_5.deps.json
+C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_5\bin\Debug\net10.0\Atividade_5.runtimeconfig.json
+C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_5\bin\Debug\net10.0\Atividade_5.dll
+C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_5\bin\Debug\net10.0\Atividade_5.pdb
+C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_5\obj\Debug\net10.0\Atividade_5.dll
+C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_5\obj\Debug\net10.0\refint\Atividade_5.dll
+C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_5\obj\Debug\net10.0\Atividade_5.pdb
+C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_5\obj\Debug\net10.0\Atividade_5.genruntimeconfig.cache
+C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_5\obj\Debug\net10.0\ref\Atividade_5.dll
