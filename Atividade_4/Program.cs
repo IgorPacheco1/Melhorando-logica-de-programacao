@@ -29,13 +29,13 @@ class program
 
     static double CalcularMedia(Estudante[] ListaEstudantes)
     {
-        int SomaMedia = 0;
+        double SomaMedia = 0;
 
         for (int i = 0; i < ListaEstudantes.Length; i++)
         {
-            SomaMedia += EstudanteId.Nota; 
-            //estou com dificuldade de entender como eu vou conseguir pegar o "ID" do estutante pra ter acesso a nota dele
-        }   //talvez eu esteja complicando o simples com esse ID que eu criei.
+            SomaMedia += ListaEstudantes[i].Nota; //Realmente aqui eu estava complicando o simples fazendo esse ID, já que já tinha como fazer isso pelo indice do vetor 
+            
+        }  
         ;
         double Media = SomaMedia / ListaEstudantes;
         return (Media);
