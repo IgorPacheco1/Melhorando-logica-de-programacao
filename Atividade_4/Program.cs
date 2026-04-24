@@ -25,7 +25,14 @@ class Estudante
 }
 class program
 {
+    static void ExibirDadosAlunos(Estudante[] ListaEstudantes)
+    {
+        for (int i = 0; i < ListaEstudantes.Length; i++)
+        {
+            System.Console.WriteLine($"Nome: {ListaEstudantes[i].Nome}\nNota: {ListaEstudantes[i].Nota}\n");
+        }
 
+    }
 
     static double CalcularMedia(Estudante[] ListaEstudantes)
     {
@@ -34,8 +41,8 @@ class program
         for (int i = 0; i < ListaEstudantes.Length; i++)
         {
             SomaMedia += ListaEstudantes[i].Nota; //Realmente aqui eu estava complicando o simples fazendo esse ID, já que já tinha como fazer isso pelo indice do vetor 
-            
-        }  
+
+        }
         ;
         double Media = SomaMedia / ListaEstudantes;
         return (Media);
@@ -50,16 +57,17 @@ class program
         Estudante[] ListaEstudantes = new Estudante[QuantidadeEstudantes];
 
         //agora q eu tenho o vetor vou começar a povoar ele
-        
-        for (int i = 0;i < QuantidadeEstudantes; i++)
+
+        for (int i = 0; i < QuantidadeEstudantes; i++)
         {
-            ListaEstudantes[i] =  new Estudante();
-            System.Console.WriteLine($"Informe o nome do {i+1}° estudante:");
+            ListaEstudantes[i] = new Estudante();
+            System.Console.WriteLine($"Informe o nome do {i + 1}° estudante:");
             ListaEstudantes[i].Nome = Console.ReadLine();
-            System.Console.WriteLine($"Informe anota do {i+1}° estudante:");
+            System.Console.WriteLine($"Informe anota do {i + 1}° estudante:");
             ListaEstudantes[i].Nota = Console.ReadLine();
         }
 
-        System.Console.WriteLine(CalcularMedia(ListaEstudantes));
+        ExibirDadosAlunos(ListaEstudantes);
+        System.Console.WriteLine($"---Média geral da turma---\n{CalcularMedia(ListaEstudantes)}");
     }
 }
