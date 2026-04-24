@@ -55,7 +55,7 @@ class Produto
 
     public string ExibicaoIndividual()
     {
-        return $"\nNome: {_Nome}\nPreço: R${_Preco}"; //pelo que eu entendi, quando eu faço a classe ser inteligente é que quando eu solicitar esse procedimento dentro do meu outro procedimento no main eu não vou precisar formatar o texto lá, e sim aqui. Isso ajuda para futuras modificarções pois se eu precisar mudar eu mudo apenas a classe e já vale para todos.
+        return $"\nNome: {_Nome}\nPreço: R${_Preco:F2}"; //pelo que eu entendi, quando eu faço a classe ser inteligente é que quando eu solicitar esse procedimento dentro do meu outro procedimento no main eu não vou precisar formatar o texto lá, e sim aqui. Isso ajuda para futuras modificarções pois se eu precisar mudar eu mudo apenas a classe e já vale para todos.
     }
 }
 
@@ -86,7 +86,7 @@ class program
             string FichaProduto = lista[i].ExibicaoIndividual(); // aqui eu armazeno em uma variavel para não ter que todas fazer ficar verificando, ele já vai estar na variavel
             System.Console.WriteLine(FichaProduto);
         }
-        System.Console.WriteLine($"---O Valor total do estoque---\n{SomaPreco}\n---O Produto de maior valor no estoque---\n{CalcularMaiorPreco(lista)}");
+        System.Console.WriteLine($"\n---O Valor total do estoque---\nR${SomaPreco}\n---O Produto de maior valor no estoque---\n{CalcularMaiorPreco(lista)}");
 
     }
 
