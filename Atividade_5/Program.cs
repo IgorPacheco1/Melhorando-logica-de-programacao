@@ -29,18 +29,21 @@ class Produto
 class program
 {
 
-
-
-
-
-
     static void Main(string[] args)
     {
         System.Console.WriteLine($"---BEM VINDO A SISTEMA DE CADASTRO DE PRODUTOS--\nQual a quantidade de produtos que deseja cadastrar?");
-        QuantidadeProdutos =  int.Parse(Console.ReadLine());
+        int QuantidadeProdutos =  int.Parse(Console.ReadLine());
 
         Produto[] ListaProdutos = new Produto[QuantidadeProdutos];
 
-        
+        for (int i = 0; i < ListaProdutos.Length; i++)
+        {   
+            ListaProdutos[i] = new Produto(); //acabei esquecendo de que para armarzenar eu tenho que primeiro criar o item da minha classe
+            System.Console.WriteLine($"Informe o nome do {i+1}° produto:");
+            ListaProdutos[i].Nome = Console.ReadLine();
+            System.Console.WriteLine($"Informe o preço do {i+1}° produto:");
+            ListaProdutos[i].Preco =  double.Parse(Console.ReadLine());
+
+        }
     }
 }
