@@ -50,15 +50,14 @@ class program
         Estudante[] ListaEstudantes = new Estudante[QuantidadeEstudantes];
 
         //agora q eu tenho o vetor vou começar a povoar ele
-        int i = 0;
-        string EstudanteID = "estudante" + $"{i}"; //sei que isso é meio inutil(ou talvez não), mas quero deixar formatado e descobrir os limites do que eu posso fazer
-        for (i < QuantidadeEstudantes; i++;)
+        
+        for (int i = 0;i < QuantidadeEstudantes; i++)
         {
-            System.Console.WriteLine($"Informe o nome do {i + 1}° estudante");
-            Estudante EstudanteID = new Estudante();
-            EstudanteID.Nome = Console.ReadLine();
-            System.Console.WriteLine($"Informe a nota do {i + 1}° estudante");
-            EstudanteID.Nota = double.Parse(Console.ReadLine());
+            ListaEstudantes[i] =  new Estudante();
+            System.Console.WriteLine($"Informe o nome do {i+1}° estudante:");
+            ListaEstudantes[i].Nome = Console.ReadLine();
+            System.Console.WriteLine($"Informe anota do {i+1}° estudante:");
+            ListaEstudantes[i].Nota = Console.ReadLine();
         }
 
         System.Console.WriteLine(CalcularMedia(ListaEstudantes));
