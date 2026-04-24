@@ -48,7 +48,7 @@ class Produto
             }
             else
             {
-                break;
+                _Preco = 0;
             }
         }
     }
