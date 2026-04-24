@@ -29,16 +29,18 @@ class Produto
 class program
 {
 
-    static double CalcularMaiorPreco(Produto[] lista)
+    static string CalcularMaiorPreco(Produto[] lista)
     {   double Maior=0;
+        string Nome="";
         for (int i = 0; i < lista.Length; i++)
         {
             if (lista[i].Preco>Maior)
             {
                 Maior = lista[i].Preco;
+                Nome  = lista[i].Nome;
             }
         }
-        return(Maior);
+        return(Nome);
     }
 
     static void ExibirDados(Produto[] lista)
@@ -50,8 +52,8 @@ class program
             SomaPreco += lista[i].Preco;
             System.Console.WriteLine($"\nNome: {lista[i].Nome}\nPreço: {lista[i].Preco}\n");
         }
-        System.Console.WriteLine($"---O Valor total do estoque---\n{SomaPreco}");
-        System.Console.WriteLine($"---O Produto de maior valor no estoque---\n");
+        System.Console.WriteLine($"---O Valor total do estoque---\n{SomaPreco}\n---O Produto de maior valor no estoque---\n{CalcularMaiorPreco(lista)}");
+        
     }
 
     static void Main(string[] args)
