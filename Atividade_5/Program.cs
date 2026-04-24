@@ -29,7 +29,7 @@ class Produto
 class program
 {
 
-    static CalcularMaiorPreco(Produto[] lista)
+    static double CalcularMaiorPreco(Produto[] lista)
     {   double Maior=0;
         for (int i = 0; i < lista.Length; i++)
         {
@@ -38,7 +38,9 @@ class program
                 Maior = lista[i].Preco;
             }
         }
+        return(Maior);
     }
+
     static void ExibirDados(Produto[] lista)
     {   
         double SomaPreco = 0;
@@ -68,7 +70,7 @@ class program
             ListaProdutos[i].Preco = double.Parse(Console.ReadLine());
 
         }
-
+            
         ExibirDados(ListaProdutos);
     }
 }
