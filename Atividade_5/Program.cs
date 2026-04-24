@@ -6,9 +6,15 @@
 //  A Entidade Produto:Crie uma estrutura para o Produto que impeça que o preço seja alterado para um valor negativo. Se alguém tentar inserir um valor abaixo de zero, o sistema deve automaticamente ajustar para zero (ou impedir a alteração).
 
 //  O nome do produto deve ser acessível para leitura e escrita, mas protegido por uma lógica de acesso controlada.
-//  A Inteligência do Objeto:O Produto não deve ser apenas um depósito de dados. Ele deve ser capaz de fornecer, por conta própria, uma linha de texto formatada com seus dados (Nome e Preço) pronta para ser exibida em um relatório, sem que o programador do Main precise montar a frase manualmente.
 
-//  O Fluxo do Sistema:Solicite a entrada de $N$ produtos.
+//  A Inteligência do Objeto:
+
+//O Produto não deve ser apenas um depósito de dados. 
+
+//Ele deve ser capaz de fornecer, por conta própria, uma linha de texto formatada com seus dados (Nome e Preço) pronta para ser exibida em um relatório, sem que o programador do Main precise montar a frase manualmente.
+
+//  O Fluxo do Sistema:
+//Solicite a entrada de $N$ produtos.
 
 //  Após o cadastro, o sistema deve processar o inventário e exibir:A lista formatada gerada pelos próprios produtos.O valor total acumulado de todos os itens.
 
@@ -46,6 +52,11 @@ class Produto
             }
         }
     }
+
+    static void ExibicaoIndividual()
+    {
+        return $"\nNome: {_Nome}\nPreço: R${_Preco}"; //pelo que eu entendi, quando eu faço a classe ser inteligente é que quando eu solicitar esse procedimento dentro do meu outro procedimento no main eu não vou precisar formatar o texto lá, e sim aqui. Isso ajuda para futuras modificarções pois se eu precisar mudar eu mudo apenas a classe e já vale para todos.
+    }
 }
 
 class program
@@ -71,9 +82,7 @@ class program
         double SomaPreco = 0;
         for (int i = 0; i < lista.Length; i++)
         {
-
             SomaPreco += lista[i].Preco;
-            System.Console.WriteLine($"\nNome: {lista[i].Nome}\nPreço: {lista[i].Preco}\n");
         }
         System.Console.WriteLine($"---O Valor total do estoque---\n{SomaPreco}\n---O Produto de maior valor no estoque---\n{CalcularMaiorPreco(lista)}");
 
