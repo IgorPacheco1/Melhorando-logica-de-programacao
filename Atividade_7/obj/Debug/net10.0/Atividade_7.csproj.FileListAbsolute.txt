@@ -1,0 +1,5 @@
+C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_7\obj\Debug\net10.0\Atividade_7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_7\obj\Debug\net10.0\Atividade_7.AssemblyInfoInputs.cache
+C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_7\obj\Debug\net10.0\Atividade_7.AssemblyInfo.cs
+C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_7\obj\Debug\net10.0\Atividade_7.csproj.CoreCompileInputs.cache
+C:\Users\zadsc\OneDrive\Documentos\Projetos\Melhorando lógica de programação\Atividade_7\obj\Debug\net10.0\Atividade_7.sourcelink.json
