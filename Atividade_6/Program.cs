@@ -12,6 +12,8 @@
  */
 
 
+using System.Runtime.InteropServices.Marshalling;
+
 class program
 {
     
@@ -29,6 +31,13 @@ class program
             // Quando saber a soma de 1 até 3, avisa que eu somo o 4 ao seu resultado". O Marinheiro 3 diz ao Marinheiro 2: "Toma o 3.
             // Quando saber a soma de 1 até 2, avisa que eu somo o 3 ao seu resultado". Isso continua até chegar ao Marinheiro 1.
             //  Como ele é o Caso Base, ele não delega. Ele apenas responde: "A soma de 1 até 1 é 1!".
+
+
+            //imagina que quero calcular a SomaRecursiva(3)
+
+            // vai entrar no if(3==1)? Não
+            // entt ele guarda o 3 {e espera o resultado de SomaRecursiva(2)}
+            // agora vai repetir isso tudo de nv, até chegar no caso base, com isso vamos ter todos os resultados.
         }
         
     }
